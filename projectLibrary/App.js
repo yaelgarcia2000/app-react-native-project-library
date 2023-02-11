@@ -1,12 +1,16 @@
 import React, {useState} from 'react';
-import LoginPage from './src/components/LoginPage';
-import TipoLibroPage from './src/components/TipoLibroPage';
+import AutorPage from './src/pages/AutorPage';
+import LoginPage from './src/pages/LoginPage';
+import TipoLibroPage from './src/pages/TipoLibroPage';
+import {NativeBaseProvider, Box} from 'native-base';
+import LibroPage from './src/pages/LibroPage';
 
 const App = () => {
   return (
     <>
-      <TipoLibroPage />
-
+      <NativeBaseProvider>
+        <LibroPage />
+      </NativeBaseProvider>
     </>
   );
 };
